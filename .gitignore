@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.iml
+*.swp
+*.swo
+
+# Quizzes (instructor-only)
+
+
+# Node
+node_modules/
+
+# Book builder output
+book/builder/
+book/builder/temp/
+bookbuilder-output/
+
+# Demo output files
+*-output.txt

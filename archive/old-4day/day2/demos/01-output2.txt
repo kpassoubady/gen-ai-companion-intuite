@@ -1,0 +1,300 @@
+kangs@Kangs-Mac ~/c/g/g/d/demos (main)> python 01-demo-prompt-rewriting.py 
+Provider:      openai
+Default model: gpt-4o
+Mini model:    gpt-4o-mini
+Credential:    OPENAI_API_KEY = ...i48A
+
+🔄 Demo: Prompt Rewriting — 5 Iterations
+Watch how small changes dramatically improve output quality.
+
+
+======================================================================
+📌 v0 — Original (vague)
+   Change: Baseline: vague, no specificity, no format
+======================================================================
+
+System: You are a helpful assistant....
+User:   Tell me about Python errors...
+──────────────────────────────────────────────────────────────────────
+Tokens: 22 in + 588 out = 610 total
+
+Output:
+In Python, errors are typically referred to as exceptions. Exceptions are events that occur during the execution of a program that disrupt the normal flow of the program's instructions. When an error occurs, Python raises an exception, which can be handled using a try-except block. If the exception is not handled, it will terminate the program and display an error message, often referred to as a traceback.
+
+Here are some common types of exceptions in Python:
+
+1. **SyntaxError**: This occurs when the parser encounters a syntax error. For example, a missing colon at the end of a function definition will raise a SyntaxError.
+
+2. **IndentationError**: This is a subclass of SyntaxError and occurs when there is an incorrect indentation. Python relies on indentation to define the structure of the code.
+
+3. **TypeError**: This occurs when an operation or function is applied to an object of inappropriate type. For example, trying to add a string and an integer will raise a TypeError.
+
+4. **NameError**: This occurs when a local or global name is not found. For example, trying to access a variable that has not been defined will raise a NameError.
+
+5. **IndexError**: This occurs when trying to access an index that is out of range for a sequence, such as a list or a tuple.
+
+6. **KeyError**: This occurs when trying to access a dictionary with a key that does not exist.
+
+7. **ValueError**: This occurs when a function receives an argument of the right type but an inappropriate value. For example, trying to convert a non-numeric string to an integer will raise a ValueError.
+
+8. **AttributeError**: This occurs when an invalid attribute reference or assignment is made. For example, trying to access a method or property that does not exist on an object will raise an AttributeError.
+
+9. **ImportError**: This occurs when an import statement fails to find the module definition or when a from ... import fails to find a name that is to be imported.
+
+10. **ZeroDivisionError**: This occurs when a division or modulo operation is performed with zero as the divisor.
+
+11. **FileNotFoundError**: This occurs when trying to open a file that does not exist.
+
+To handle exceptions in Python, you can use a try-except block:
+
+```python
+try:
+    # Code that may raise an exception
+    result = 10 / 0
+except ZeroDivisionError as e:
+    # Code to handle the exception
+    print("Cannot divide by zero:", e)
+```
+
+In this example, the ZeroDivisionError is caught, and the program prints a message instead of terminating unexpectedly.
+
+Python also allows you to define your own exceptions by creating a new class that inherits from the built-in `Exception` class. This can be useful for creating specific error types for your application logic.
+
+⏎  Press Enter for the next iteration...
+
+======================================================================
+📌 v1 — Add specificity
+   Change: Added: specific number (5), specific audience (beginners), specific ask (most common)
+======================================================================
+
+System: You are a helpful assistant....
+User:   Explain the 5 most common Python errors that beginners encounter....
+──────────────────────────────────────────────────────────────────────
+Tokens: 29 in + 574 out = 603 total
+
+Output:
+Certainly! When beginners start learning Python, they often encounter a few common types of errors. Understanding these can help in debugging and writing better code. Here are five of the most common Python errors:
+
+1. **SyntaxError**:
+   - **Description**: This error occurs when the Python interpreter encounters code that does not conform to the syntax rules of the language. It's often due to typos, missing colons, or incorrect indentation.
+   - **Example**: 
+     ```python
+     if x > 5
+         print("x is greater than 5")
+     ```
+     *Fix*: Ensure that the colon is present after the `if` statement:
+     ```python
+     if x > 5:
+         print("x is greater than 5")
+     ```
+
+2. **IndentationError**:
+   - **Description**: Python uses indentation to define blocks of code. An `IndentationError` occurs when there's a mismatch in the expected indentation level.
+   - **Example**:
+     ```python
+     def my_function():
+     print("Hello")
+     ```
+     *Fix*: Indent the `print` statement to be part of the function block:
+     ```python
+     def my_function():
+         print("Hello")
+     ```
+
+3. **NameError**:
+   - **Description**: This error is raised when the code attempts to use a variable or function name that hasn't been defined or is out of scope.
+   - **Example**:
+     ```python
+     print(value)
+     ```
+     *Fix*: Ensure that the variable `value` is defined before it is used:
+     ```python
+     value = 10
+     print(value)
+     ```
+
+4. **TypeError**:
+   - **Description**: This error occurs when an operation or function is applied to an object of inappropriate type. For example, trying to add a string and an integer.
+   - **Example**:
+     ```python
+     result = "Number: " + 5
+     ```
+     *Fix*: Convert the integer to a string before concatenation:
+     ```python
+     result = "Number: " + str(5)
+     ```
+
+5. **IndexError**:
+   - **Description**: This error is raised when trying to access an index that is out of the range of a list or other indexable collection.
+   - **Example**:
+     ```python
+     my_list = [1, 2, 3]
+     print(my_list[3])
+     ```
+     *Fix*: Ensure the index is within the valid range:
+     ```python
+     print(my_list[2])  # Accessing the last element
+     ```
+
+By understanding these common errors, beginners can more easily debug their code and develop a better grasp of Python's syntax and behavior.
+
+⏎  Press Enter for the next iteration...
+
+======================================================================
+📌 v2 — Add context
+   Change: Added: role/persona, audience context (career changers, no experience)
+======================================================================
+
+System: You are a patient Python tutor teaching a bootcamp for career changers with no p...
+User:   Explain the 5 most common Python errors that beginners encounter....
+──────────────────────────────────────────────────────────────────────
+Tokens: 43 in + 662 out = 705 total
+
+Output:
+Certainly! When you're just starting out with Python, it's common to run into a few types of errors. Understanding these can help you debug your code more effectively. Here are the five most common errors beginners encounter:
+
+1. **SyntaxError**:
+   - **What it is**: This error occurs when the Python interpreter encounters code that doesn't conform to the language's syntax rules.
+   - **Common causes**: Missing colons (`:`) at the end of control structures (like `if`, `for`, `while`), unmatched parentheses, or incorrect indentation.
+   - **Example**:
+     ```python
+     if x > 5
+         print("x is greater than 5")
+     ```
+     *Fix*: Add a colon after the condition: `if x > 5:`.
+
+2. **IndentationError**:
+   - **What it is**: Python uses indentation to define blocks of code. If the indentation is inconsistent, you'll encounter this error.
+   - **Common causes**: Mixing spaces and tabs, or incorrect indentation levels.
+   - **Example**:
+     ```python
+     def greet():
+     print("Hello, world!")
+     ```
+     *Fix*: Indent the `print` statement to be inside the function:
+     ```python
+     def greet():
+         print("Hello, world!")
+     ```
+
+3. **NameError**:
+   - **What it is**: This error occurs when you try to use a variable or function name that hasn't been defined yet.
+   - **Common causes**: Typos in variable names, or trying to use a variable before it's assigned a value.
+   - **Example**:
+     ```python
+     print(message)
+     ```
+     *Fix*: Ensure the variable is defined before use:
+     ```python
+     message = "Hello"
+     print(message)
+     ```
+
+4. **TypeError**:
+   - **What it is**: This error occurs when an operation is applied to an object of inappropriate type.
+   - **Common causes**: Trying to add a string and an integer, or calling a function with the wrong number of arguments.
+   - **Example**:
+     ```python
+     result = "The answer is: " + 42
+     ```
+     *Fix*: Convert the integer to a string before concatenation:
+     ```python
+     result = "The answer is: " + str(42)
+     ```
+
+5. **IndexError**:
+   - **What it is**: This error occurs when you try to access an index that is out of the range of a list or string.
+   - **Common causes**: Using an index that is too large or negative beyond the list's range.
+   - **Example**:
+     ```python
+     my_list = [1, 2, 3]
+     print(my_list[3])
+     ```
+     *Fix*: Ensure the index is within the valid range:
+     ```python
+     print(my_list[2])  # Accessing the last element
+     ```
+
+Understanding these errors and how to fix them will greatly improve your debugging skills as you continue learning Python. Remember, encountering errors is a normal part of programming, and each error is an opportunity to learn something new!
+
+⏎  Press Enter for the next iteration...
+
+======================================================================
+📌 v3 — Add output format
+   Change: Added: specific output format (table with defined columns)
+======================================================================
+
+System: You are a patient Python tutor teaching a bootcamp for career changers with no p...
+User:   Explain the 5 most common Python errors that beginners encounter.
+
+Format as a t...
+──────────────────────────────────────────────────────────────────────
+
+Tokens: 63 in + 341 out = 404 total
+
+Output:
+Certainly! Here's a table outlining the 5 most common Python errors that beginners often encounter:
+
+| Error Name       | What It Means                                                                 | Example Code                          | How to Fix                                                                                   |
+|------------------|-------------------------------------------------------------------------------|---------------------------------------|----------------------------------------------------------------------------------------------|
+| SyntaxError      | The code is not written in a way that Python can understand.                  | `print("Hello World"`                 | Ensure all parentheses, brackets, and quotes are properly closed: `print("Hello World")`.    |
+| NameError        | The code is trying to use a variable or function that hasn't been defined.    | `print(message)`                      | Define the variable before using it: `message = "Hello World"` then `print(message)`.        |
+| TypeError        | An operation is being applied to an object of inappropriate type.             | `len(5)`                              | Use the correct type for the operation: `len("Hello")` instead of `len(5)`.                  |
+| IndexError       | The code is trying to access an index that is out of the range of a sequence. | `my_list = [1, 2, 3]; print(my_list[3])` | Ensure the index is within the range: `print(my_list[2])` for the last element.              |
+| IndentationError | The code is not properly indented, which is crucial in Python for block definitions. | `def my_function():\nprint("Hello")` | Indent the code block correctly: `def my_function():\n    print("Hello")`.                   |
+
+Feel free to ask if you need further clarification on any of these errors!
+
+⏎  Press Enter for the next iteration...
+======================================================================
+📌 v4 — Add constraints
+   Change: Added: constraints (length, simplicity, ordering)
+======================================================================
+
+System: You are a patient Python tutor teaching a bootcamp for career changers with no p...
+User:   Explain the 5 most common Python errors that beginners encounter.
+
+Format as a t...
+──────────────────────────────────────────────────────────────────────
+Tokens: 101 in + 272 out = 373 total
+
+Output:
+| Error Name         | What It Means                                                                 | Example Code              | How to Fix                                                                 |
+|---------------------|------------------------------------------------------------------------------|---------------------------|-------------------------------------------------------------------------|
+| SyntaxError         | The code is not written correctly according to Python's rules.               | `print("Hello World"`     | Add the missing closing parenthesis: `print("Hello World")`.            |
+| NameError           | The code is trying to use a variable or function that hasn't been defined.   | `print(message)`          | Define the variable first: `message = "Hello"` then `print(message)`.   |
+| TypeError           | An operation is being used on an inappropriate data type.                    | `len(5)`                  | Use a string or list instead: `len("Hello")` or `len([1, 2, 3])`.       |
+| IndexError          | The code is trying to access an index that doesn't exist in a list or string.| `my_list = [1, 2]; print(my_list[2])` | Ensure the index is within range: `print(my_list[1])`.                 |
+| ValueError          | A function receives an argument of the right type but an inappropriate value.| `int("abc")`              | Provide a valid integer string: `int("123")`.                           |
+
+⏎  Press Enter for the next iteration...
+
+======================================================================
+📌 v5 — Add an example (few-shot)
+   Change: Added: one example row showing the exact format and level of detail expected
+======================================================================
+
+System: You are a patient Python tutor teaching a bootcamp for career changers with no p...
+User:   Explain the 5 most common Python errors that beginners encounter.
+
+Format as a t...
+──────────────────────────────────────────────────────────────────────
+Tokens: 135 in + 227 out = 362 total
+
+Output:
+| Error Name       | What It Means                                          | Example Code                  | How to Fix                                               |
+|------------------|-------------------------------------------------------|-------------------------------|----------------------------------------------------------|
+| SyntaxError      | You typed something Python can't understand.          | `print('hello'`               | Check for missing parentheses, quotes, or colons.        |
+| NameError        | You're using a name that hasn't been defined.         | `print(message)`              | Make sure the variable is defined before you use it.     |
+| TypeError        | You're using a value in a way that doesn't make sense.| `len(5)`                      | Check if you're using the right type of data.            |
+| IndexError       | You're trying to access an item that doesn't exist.   | `my_list[5]` with `my_list = [1, 2, 3]` | Ensure the index is within the list's range.             |
+| ValueError       | You're using a value that's the right type but wrong. | `int('hello')`                | Make sure the value is appropriate for the operation.    |
+
+======================================================================
+📊 Summary of improvements:
+   v0 → v1: Specificity eliminates vague, unfocused output
+   v1 → v2: Context/role shapes tone and detail level
+   v2 → v3: Format makes output scannable and consistent
+   v3 → v4: Constraints keep output concise and ordered
+   v4 → v5: Example teaches the exact pattern expected
+======================================================================

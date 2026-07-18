@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Exec(git commit)",
+      "Exec(git checkout)",
+      "Exec(git push)",
+      "Exec(gh pr)",
+      "Exec(git pull)",
+      "Exec(git reset)"
+    ]
+  }
+}

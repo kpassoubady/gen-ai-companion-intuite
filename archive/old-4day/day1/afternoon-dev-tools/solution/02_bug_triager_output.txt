@@ -1,0 +1,81 @@
+((venv) ) kangs@Kangs-Mac solution % pwd
+/Users/kangs/code/github/gen-ai-companion/day1/afternoon-dev-tools/solution
+((venv) ) kangs@Kangs-Mac solution % python 02_bug_triager.py 
+Provider:      openai
+Default model: gpt-4o
+Mini model:    gpt-4o-mini
+Credential:    OPENAI_API_KEY = ...i48A
+
+🐛 Bug Triager — Lab 1.4
+============================================================
+
+📋 Triaging: Connection Error
+────────────────────────────────────────
+Log:
+Traceback (most recent call last):
+  File "app.py", line 42, in process_payment
+    result = gateway.charge(amount, card_token)
+  File "gateway.py", line 18, in charge
+    response = requests.post(url...
+────────────────────────────────────────
+Triage Result:
+{
+  "severity": "HIGH",
+  "category": "Network Error",
+  "root_cause": "The application is unable to connect to the payment gateway due to a connection error, possibly caused by network issues or the gateway being down.",
+  "affected_component": "Payment processing module in app.py and gateway.py",
+  "suggested_fix": [
+    "Check the network connection and ensure it is stable.",
+    "Verify the payment gateway URL and ensure it is correct and accessible.",
+    "Increase the timeout value to allow more time for the connection.",
+    "Implement retry logic with exponential backoff for better resilience."
+  ],
+  "immediate_action": "Check the status of the payment gateway and network connectivity."
+}
+============================================================
+
+📋 Triaging: Memory Error
+────────────────────────────────────────
+Log:
+Traceback (most recent call last):
+  File "data_pipeline.py", line 156, in load_dataset
+    df = pd.read_csv(filepath)
+  File "pandas/io/parsers.py", line 685, in read_csv
+    return _read(filepath_or...
+────────────────────────────────────────
+Triage Result:
+{
+  "severity": "HIGH",
+  "category": "Memory Error",
+  "root_cause": "The system ran out of memory while trying to allocate space for a large dataset.",
+  "affected_component": "Data loading function in data_pipeline.py",
+  "suggested_fix": [
+    "Increase available system memory or use a machine with more RAM.",
+    "Optimize the dataset loading process by loading data in chunks.",
+    "Use data types that consume less memory if possible.",
+    "Consider using a distributed data processing framework like Dask."
+  ],
+  "immediate_action": "Free up memory by closing other applications or processes and try running the script again."
+}
+============================================================
+
+📋 Triaging: Deprecation Warning
+────────────────────────────────────────
+Log:
+DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a
+future version. Use datetime.datetime.now(datetime.UTC) instead.
+  timestamp = datetime.datetime.utcnow()...
+────────────────────────────────────────
+Triage Result:
+{
+  "severity": "LOW",
+  "category": "Deprecation Warning",
+  "root_cause": "The use of datetime.datetime.utcnow() is deprecated and will be removed in a future version.",
+  "affected_component": "Code using datetime.datetime.utcnow()",
+  "suggested_fix": [
+    "Replace datetime.datetime.utcnow() with datetime.datetime.now(datetime.UTC)"
+  ],
+  "immediate_action": "Update the code to use the recommended method to avoid future issues."
+}
+============================================================
+((venv) ) kangs@Kangs-Mac solution % 
