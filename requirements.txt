@@ -11,14 +11,19 @@ anthropic>=0.30.0
 # Deep learning: PyTorch (Day 1-3 labs)
 # macOS / Linux: standard install works as-is.
 # Windows CPU-only: install separately first to get the smaller CPU wheel:
-#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 torch>=2.3.0
+torchvision>=0.18.0
+
+# TensorFlow (optional, Lab 1.2 alternative to PyTorch + quantization demo)
+# tensorflow>=2.16.0
 
 # Hugging Face ecosystem (Days 1-3: BERT/GPT, diffusion, fine-tuning, LoRA)
 transformers>=4.41.0
 diffusers>=0.27.0
 peft>=0.11.0
 accelerate>=0.30.0
+datasets>=2.19.0
 
 # Agentic AI frameworks (Day 2)
 smolagents>=1.0.0
@@ -26,7 +31,9 @@ langgraph>=0.2.0
 
 # Data, ML & embeddings
 numpy>=1.26.0
+pandas>=2.2.0
 scikit-learn>=1.5.0
+matplotlib>=3.9.0
 sentence-transformers>=3.0.0
 
 # Vector stores (choose one per class)
