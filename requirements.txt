@@ -28,6 +28,8 @@ datasets>=2.19.0
 # Agentic AI frameworks (Day 2)
 smolagents>=1.0.0
 langgraph>=0.2.0
+# fastapi is pulled in by litellm's tool-calling path (Lab 2.4 function calling).
+fastapi>=0.111.0
 
 # Data, ML & embeddings
 numpy>=1.26.0
