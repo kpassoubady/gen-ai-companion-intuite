@@ -1,0 +1,26 @@
+{
+  "train": [
+    {"text": "My invoice payment link is charging the wrong card fee.", "label": "billing"},
+    {"text": "I was double charged on my monthly subscription.", "label": "billing"},
+    {"text": "How do I download a past invoice PDF for my records?", "label": "billing"},
+    {"text": "The annual plan discount did not apply to my renewal.", "label": "billing"},
+    {"text": "Direct deposit did not reach my employee this pay run.", "label": "payroll"},
+    {"text": "How do I add a new employee before running payroll?", "label": "payroll"},
+    {"text": "My payroll tax filing shows as pending for weeks.", "label": "payroll"},
+    {"text": "Can I switch from Core to Premium payroll mid-month?", "label": "payroll"},
+    {"text": "Where do I enter my Schedule C income in TurboTax?", "label": "tax_filing"},
+    {"text": "I need to file an extension past the April deadline.", "label": "tax_filing"},
+    {"text": "How do I claim the home office deduction this year?", "label": "tax_filing"},
+    {"text": "My refund tracker has not updated after two weeks.", "label": "tax_filing"},
+    {"text": "My bank account will not connect to import transactions.", "label": "integrations"},
+    {"text": "Receipts forwarded to my inbox are not showing up.", "label": "integrations"},
+    {"text": "The mobile app will not sync with my desktop account.", "label": "integrations"},
+    {"text": "Can I connect my Shopify store to import sales?", "label": "integrations"}
+  ],
+  "test": [
+    {"text": "I was billed twice for the same subscription month.", "label": "billing"},
+    {"text": "An employee's paycheck was not deposited on payday.", "label": "payroll"},
+    {"text": "Where do I report self-employment income on my return?", "label": "tax_filing"},
+    {"text": "My credit card feed stopped importing transactions.", "label": "integrations"}
+  ]
+}

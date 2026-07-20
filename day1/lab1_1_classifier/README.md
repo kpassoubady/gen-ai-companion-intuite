@@ -15,7 +15,7 @@ Run in Google Colab (recommended): open `start/lab1_1_classifier.ipynb` with the
 "Open in Colab" badge and run the first cell to install dependencies.
 
 To run locally instead, activate the repo virtual environment and install
-requirements. See the [root README](../../README.md).
+requirements. See the [README](../../README.md).
 
 ## Instructions
 

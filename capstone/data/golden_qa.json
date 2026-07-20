@@ -1,0 +1,22 @@
+[
+  {
+    "question": "What is the default payment term on a QuickBooks invoice?",
+    "expected": "Net 30, payment due 30 days after the invoice date"
+  },
+  {
+    "question": "What is the sample sales tax rate for California in this course?",
+    "expected": "7.25 percent"
+  },
+  {
+    "question": "How much is the QuickBooks Payroll Core plan?",
+    "expected": "45 dollars per month plus 6 dollars per employee per month"
+  },
+  {
+    "question": "What is the maximum home office deduction with the simplified method?",
+    "expected": "1500 dollars (5 dollars per square foot up to 300 square feet)"
+  },
+  {
+    "question": "What is the federal tax filing deadline and the extension date?",
+    "expected": "April 15, with an extension to October 15"
+  }
+]
