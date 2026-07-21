@@ -38,29 +38,29 @@ To shrink the prompting download, set `MODEL_NAME = "google/flan-t5-small"` in
 | Demo | Shows | Needs download |
 | :--- | :--- | :--- |
 | `demo-tokenization.py` ([Colab](notebooks/demo-tokenization.ipynb)) | BPE vs WordPiece, token IDs, token counts | yes (bert) |
-| `demo-bow-vs-embeddings.py` | bag-of-words limits vs embedding similarity | yes (minilm) |
+| `demo-bow-vs-embeddings.py` ([Colab](notebooks/demo-bow-vs-embeddings.ipynb)) | bag-of-words limits vs embedding similarity | yes (minilm) |
 
 ### Session 2: Large Language Models
 
 | Demo | Shows | Needs download |
 | :--- | :--- | :--- |
-| `demo-autoregressive.py` | generation as next-token prediction | yes (gpt2) |
-| `demo-huggingface-tour.py` | one pipeline API across three tasks | yes (gpt2, distilbert) |
-| `demo-contextual-embeddings.py` | BERT gives context-dependent vectors | yes (bert) |
+| `demo-autoregressive.py` ([Colab](notebooks/demo-autoregressive.ipynb)) | generation as next-token prediction | yes (gpt2) |
+| `demo-huggingface-tour.py` ([Colab](notebooks/demo-huggingface-tour.ipynb)) | one pipeline API across three tasks | yes (gpt2, distilbert) |
+| `demo-contextual-embeddings.py` ([Colab](notebooks/demo-contextual-embeddings.ipynb)) | BERT gives context-dependent vectors | yes (bert) |
 
 ### Session 3: Language Generation Tasks & Prompting
 
 | Demo | Shows | Needs download |
 | :--- | :--- | :--- |
-| `demo-prompting-techniques.py` | zero-shot, few-shot, chain-of-thought | yes (flan-t5) |
-| `demo-prompt-injection.py` | injection, leaking, hijacking, mitigations | no |
+| `demo-prompting-techniques.py` ([Colab](notebooks/demo-prompting-techniques.ipynb)) | zero-shot, few-shot, chain-of-thought | yes (flan-t5) |
+| `demo-prompt-injection.py` ([Colab](notebooks/demo-prompt-injection.ipynb)) | injection, leaking, hijacking, mitigations | no |
 
 ### Session 4: Agentic AI
 
 | Demo | Shows | Needs download |
 | :--- | :--- | :--- |
-| `demo-function-calling.py` | the function-calling loop | no |
-| `demo-react-agent.py` | ReAct thought, action, observation loop | no |
+| `demo-function-calling.py` ([Colab](notebooks/demo-function-calling.ipynb)) | the function-calling loop | no |
+| `demo-react-agent.py` ([Colab](notebooks/demo-react-agent.ipynb)) | ReAct thought, action, observation loop | no |
 
 ## Running a demo
 
