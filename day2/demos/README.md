@@ -37,7 +37,7 @@ To shrink the prompting download, set `MODEL_NAME = "google/flan-t5-small"` in
 
 | Demo | Shows | Needs download |
 | :--- | :--- | :--- |
-| `demo-tokenization.py` | BPE vs WordPiece, token IDs, token counts | yes (bert) |
+| `demo-tokenization.py` ([Colab](notebooks/demo-tokenization.ipynb)) | BPE vs WordPiece, token IDs, token counts | yes (bert) |
 | `demo-bow-vs-embeddings.py` | bag-of-words limits vs embedding similarity | yes (minilm) |
 
 ### Session 2: Large Language Models
