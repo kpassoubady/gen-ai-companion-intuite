@@ -2,6 +2,11 @@
 
 **Day 2 - Session 4**
 
+> **Requires an API key.** This lab drives the agent with a hosted LLM through the
+> shared client. No key? Use the no-key version at
+> [`../lab2_4_agent_nokey/`](../lab2_4_agent_nokey/), which builds the same
+> function-calling and ReAct loop in pure Python.
+
 ## Objectives
 
 1. Define tools the model can call, each a typed function with a docstring.

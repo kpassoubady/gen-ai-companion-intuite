@@ -2,6 +2,10 @@
 
 **Day 2 - Session 3**
 
+> **Requires an API key.** This lab calls a hosted LLM through the shared client.
+> No key? Use the no-key version at [`../lab2_3_prompting_nokey/`](../lab2_3_prompting_nokey/),
+> which teaches the same techniques on a small local model.
+
 ## Objectives
 
 1. Summarize text with zero-shot prompting, then refine with a role and format.
