@@ -118,5 +118,5 @@ notebook for reference:
 | :--- | :--- |
 | Part 1 | [Lab 2.1](../lab2_1_similarity/) |
 | Part 2 | [Lab 2.2](../lab2_2_bert_gpt/) |
-| Part 3 | [Lab 2.3](../lab2_3_prompting/) |
-| Part 4 | [Lab 2.4](../lab2_4_agent/)
+| Part 3 | [Lab 2.3](../lab2_3_prompting/) (no key: [Lab 2.3 no key](../lab2_3_prompting_nokey/)) |
+| Part 4 | [Lab 2.4](../lab2_4_agent/) (no key: [Lab 2.4 no key](../lab2_4_agent_nokey/)) |
