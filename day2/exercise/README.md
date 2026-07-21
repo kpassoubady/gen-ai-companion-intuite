@@ -14,15 +14,15 @@ prompt you can hand to an LLM.
 
 1. **Session 1:** embed documents and run a similarity search.
 2. **Session 2:** run a local pre-trained model using a Hugging Face pipeline.
-3. **Session 3:** use prompting techniques (role, few-shot, and structured output) via an API.
-4. **Session 4:** define a tool and wire it to a simple agent.
+3. **Session 3:** use prompting techniques (role, few-shot, and structured output) via an API, or on a local model without a key.
+4. **Session 4:** define a tool and wire it to a simple agent, using an API or a scripted loop without a key.
 
 ## Setup
 
 1. Open [Google Colab](https://colab.research.google.com) and create a new notebook.
 2. Keep the free CPU runtime.
 3. Install anything a step needs with `!pip install ...` in the first cell.
-4. For Parts 3 and 4, you will need a valid API key (OpenAI, Anthropic, or Gemini) set as an environment variable or passed directly into the code.
+4. Parts 3 and 4 have two paths. **With an API key** (OpenAI, Anthropic, or Gemini), use the main prompt. **Without a key**, use the "Without an API key" prompt in each part, which runs a small local model or pure Python. Parts 1 and 2 never need a key.
 
 ## How to use an LLM for this
 
@@ -79,6 +79,23 @@ Explain how to set the API key in Colab.
 
 **You should see:** a clean JSON string with exactly the requested fields and no extra conversational text.
 
+#### Without an API key
+
+Run the same prompting ideas (few-shot, structured output) on a small local model.
+
+```text
+Write Python for Google Colab that:
+1. Installs transformers and torch.
+2. Loads the local instruction model 'google/flan-t5-base' with AutoModelForSeq2SeqLM and AutoTokenizer.
+3. Defines a helper generate(prompt) that greedily decodes and returns the text.
+4. Builds a few-shot prompt with three labeled examples that classify a review as POSITIVE, NEGATIVE, or NEUTRAL.
+5. Classifies two new reviews: "This update broke my workflow." and "Best onboarding I have had."
+6. Prints each review with its predicted label.
+No API key is needed; the model downloads once and runs locally on CPU.
+```
+
+**You should see:** the model labeling the reviews as NEGATIVE and POSITIVE using only local compute, in the exact one-word format the examples set.
+
 ### Part 4: Define a tool and a simple agent
 
 Use smolagents to give an LLM a tool it can call.
@@ -95,12 +112,28 @@ Write Python for Google Colab that:
 
 **You should see:** the agent reasoning that it needs to call your function, executing it, and returning the fake stock price in its final answer.
 
+#### Without an API key
+
+Build the same tool-use and ReAct loop by hand, with a scripted planner in place of the LLM.
+
+```text
+Write Python for Google Colab (pure Python, no API key, no installs) that:
+1. Defines a tool get_stock_price(symbol) returning fake prices (AAPL is 150, GOOG is 120).
+2. Puts the tool in a TOOLS dict keyed by its name.
+3. Defines a scripted planner plan_next_step(question, observations) that returns the next tool call as a dict, then a final answer once it has a price.
+4. Writes a ReAct loop that, for each step, prints Thought, Action, and Observation, looks the tool up in TOOLS by name, runs it, and stops at the final answer.
+5. Runs it with the question "What is the stock price of Apple?"
+No API key or model download is needed.
+```
+
+**You should see:** a Thought/Action/Observation trace that calls get_stock_price and returns 150, the same loop the agent runs, with the planning step scripted instead of driven by a model.
+
 ## Success checklist
 
 - [ ] Part 1 prints documents sorted by semantic similarity
 - [ ] Part 2 classifies two sentences and prints the scores
-- [ ] Part 3 outputs structured JSON using few-shot examples
-- [ ] Part 4 shows an agent deciding to run your python function
+- [ ] Part 3 uses few-shot prompting (structured JSON with a key, or local labels without one)
+- [ ] Part 4 runs a tool through a loop (a smolagents agent with a key, or a scripted ReAct loop without one)
 
 ## Stretch goals
 
