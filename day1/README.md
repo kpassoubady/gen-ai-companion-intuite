@@ -19,3 +19,10 @@ matching `solution/` notebook has the reference answer.
 
 To run locally instead, see the [root README](../README.md) for environment
 setup.
+
+## Demos and exercise
+
+- [`demos/`](demos/): instructor demo scripts for each session, as `.py` files
+  plus matching Colab notebooks. Every demo runs without an API key.
+- [`exercise/`](exercise/): a self-paced Day 1 wrap-up that revisits all four
+  sessions in one notebook, with a ready-to-use prompt for each step.
