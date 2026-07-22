@@ -1,6 +1,6 @@
 # Gen AI Labs Companion
 
-Welcome to the Gen AI course! This repository contains the hands-on labs you will complete during the workshops. Every lab is a Jupyter notebook, organized by day and session.
+Welcome to the Gen AI course! This repository contains the hands-on labs you will complete during the workshops, plus instructor demos and a self-paced wrap-up exercise for each day. Every lab is a Jupyter notebook, organized by day and session.
 
 ## How to run the labs
 
@@ -82,23 +82,43 @@ A few things to know:
 
 ## Lab index
 
-| Day | Lab | Folder |
-| :--- | :--- | :--- |
-| Day 1 | Train and evaluate a classifier | `day1/lab1_1_classifier/` |
-| Day 1 | Image classification | `day1/lab1_2_image_clf/` |
-| Day 1 | Variational autoencoder | `day1/lab1_3_vae/` |
-| Day 1 | Diffusion pipeline | `day1/lab1_4_diffusion/` |
-| Day 2 | Similarity search | `day2/lab2_1_similarity/` |
-| Day 2 | BERT and GPT | `day2/lab2_2_bert_gpt/` |
-| Day 2 | Prompting techniques | `day2/lab2_3_prompting/` |
-| Day 2 | Simple agent | `day2/lab2_4_agent/` |
-| Day 3 | BERT fine-tuning | `day3/lab3_1_bert_finetune/` |
-| Day 3 | LoRA | `day3/lab3_2_lora/` |
-| Day 3 | Sampling techniques | `day3/lab3_3_sampling/` |
-| Day 3 | End-to-end RAG | `day3/lab3_4_rag/` |
-| Capstone | Capstone project | `capstone/` |
+| Day | Lab | API key | Folder |
+| :--- | :--- | :--- | :--- |
+| Day 1 | Train and evaluate a classifier | No | `day1/lab1_1_classifier/` |
+| Day 1 | Image classification | No | `day1/lab1_2_image_clf/` |
+| Day 1 | Variational autoencoder | No | `day1/lab1_3_vae/` |
+| Day 1 | Diffusion pipeline | No | `day1/lab1_4_diffusion/` |
+| Day 2 | Similarity search | No | `day2/lab2_1_similarity/` |
+| Day 2 | BERT and GPT | No | `day2/lab2_2_bert_gpt/` |
+| Day 2 | Prompting techniques | Yes | `day2/lab2_3_prompting/` |
+| Day 2 | Prompting techniques (no key) | No | `day2/lab2_3_prompting_nokey/` |
+| Day 2 | Simple agent | Yes | `day2/lab2_4_agent/` |
+| Day 2 | Simple agent (no key) | No | `day2/lab2_4_agent_nokey/` |
+| Day 3 | BERT fine-tuning | No | `day3/lab3_1_bert_finetune/` |
+| Day 3 | LoRA | No | `day3/lab3_2_lora/` |
+| Day 3 | Sampling techniques | No | `day3/lab3_3_sampling/` |
+| Day 3 | End-to-end RAG | Yes | `day3/lab3_4_rag/` |
+| Capstone | Small Business Finance Assistant | Yes | `capstone/` |
+| Capstone | Same assistant on a local model (no key) | No | `capstone_nokey/` |
+
+Labs marked "Yes" call a hosted LLM through the shared client and need an API key. Their "(no key)" counterparts teach the same ideas on a small local model or pure Python.
 
 Follow the instructions in the `README.md` file inside each session's folder for lab-specific details.
+
+## Demos and exercises
+
+Beyond the labs, every day folder has two more things:
+
+- `demos/`: instructor demo scripts that show a concept live, as `.py` files plus matching Colab notebooks. Every demo runs without an API key, using small Hugging Face models or pure Python.
+- `exercise/`: a short, self-paced wrap-up that revisits the whole day in one notebook, with a ready-to-use prompt for each step.
+
+| Day | Demos | Exercise |
+| :--- | :--- | :--- |
+| Day 1 | `day1/demos/` | `day1/exercise/` |
+| Day 2 | `day2/demos/` | `day2/exercise/` |
+| Day 3 | `day3/demos/` | `day3/exercise/` |
+
+Each `demos/` and `exercise/` folder has its own `README.md` with details.
 
 ## Why VS Code helps you learn faster
 

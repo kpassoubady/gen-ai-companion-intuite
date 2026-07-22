@@ -12,7 +12,9 @@ Colab CPU or T4 runtime with no GPU required.
 | [Lab 3.4](lab3_4_rag/) | Build an end-to-end RAG pipeline | Session 3 |
 
 The Day 3 capstone (a Small Business Finance Assistant) lives in
-[`../capstone/`](../capstone/).
+[`../capstone/`](../capstone/). No API key? Use the no-key version at
+[`../capstone_nokey/`](../capstone_nokey/), which builds the same assistant on a
+small local model.
 
 ## How to run
 
@@ -32,3 +34,10 @@ because they need a CUDA GPU.
 
 To run locally instead, see the [root README](../README.md) for environment
 setup.
+
+## Demos and exercise
+
+- [`demos/`](demos/): instructor demo scripts for each session, as `.py` files
+  plus matching Colab notebooks. Every demo runs without an API key.
+- [`exercise/`](exercise/): a self-paced Day 3 wrap-up that revisits all four
+  sessions in one notebook, with a ready-to-use prompt for each step.

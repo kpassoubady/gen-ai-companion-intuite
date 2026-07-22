@@ -2,6 +2,11 @@
 
 **Day 3 - Session 4**
 
+> **Requires an API key.** Generation and the judge call a hosted LLM through
+> the shared client. No key? Use the no-key version at
+> [`../capstone_nokey/`](../capstone_nokey/), which builds the same assistant on
+> a small local model.
+
 Build a retrieval-augmented assistant that answers small-business finance
 questions over a mock QuickBooks and TurboTax help knowledge base. Everyone
 ships the base assistant; then pick up the tiered stretch goals as time allows.
